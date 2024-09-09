@@ -17,8 +17,8 @@ This is my project backend
 * Java
    * Trilhos
       * Para criar e construir seu acordo de banco de dados do projeto. Através de pacotes como Model para modelar classes(entidades),
-      * Services para criar regras de negócios, Repository para conexão com banco, Controller mais voltado para front do projeto, fazendo
-      * injeção de dependências das classes necessárias para o processo da aplicação.
+      Services para criar regras de negócios, Repository para conexão com banco, Controller mais voltado para front do projeto, fazendo
+      injeção de dependências das classes necessárias para o processo da aplicação.
 
 * Spring Boot
    * Para crair projeto com nome, dominio e dependências. 
