@@ -1,38 +1,36 @@
 # Exercício 1: Aluno_Online
 Blog Lucas Fernandes
-This is my blog \o/ Enjoy It and I hope you can learn a lot!
-
-Technology
+This is my project backend
+__________________________________________________________________________________________________________________________________
+# Technology
 Here are the technologies used in this project.
 
-Ruby version 3.0.0
-Rails version 6.1.3.2
+Java version 17
+Spring Boot 
+Maven
 PostgreSQL
-Webpacker
-Services Used
+Dbeaver
 Github
-Heroku
-Ruby Gems
-Devise
-Bootstrap
-Kaminari
-Select2
-Cancancan
-Getting started
 Dependency
 
-Ruby
-Rails
-To create and build your database accord of the project.
+Java
+Trilhos
+Para criar e construir seu acordo de banco de dados do projeto. Através de pacotes como Model para modelar classes(entidades),
+Services para criar regras de negócios, Repository para conexão com banco, Controller mais voltado para front do projeto, fazendo
+injeção de dependências das classes necessárias para o processo da aplicação.
 
-rake db:create db:migrate
-To create the previous files to use on the project, on the database.
+Spring Boot
+Para crair projeto com nome, dominio e dependências. 
 
-rake db:seed
-To install the gems.
+Dependency
+As dependências utilizadas no projeto: "Spring web" para visualização do projeto,
+"Spring data" para integração e simplificar acesso ao banco de dados, "PostgresSQL" para permitir acesso do spring boot com o banco de
+dados PostgreSQL, "Lombok" para ajudar na parte de criação dos códigos como os gets,sets, e acelerar na produçao.
 
-bundle install
-To run the project.
 
-rails s
-How to use
+Dbeaver
+Para gerenciamento do banco de dados.
+
+PostgreSQL
+para criação e manipulação dos dados assim como a conexão com aplicação.
+
