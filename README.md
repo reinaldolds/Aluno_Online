@@ -4,7 +4,7 @@ Aluno: Reinaldo Lira de Sousa
 This is my project backend
 
 # Technology
-* Here are the technologies used in this project.
+* Here are the technologies used in this project(Aqui estão as tecnologias usadas neste projeto):
 
    * Java version 17
    * Spring Boot 
