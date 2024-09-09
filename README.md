@@ -13,6 +13,7 @@ This is my project backend
    * Dbeaver
    * Github
    * Dependency
+   * Postman
 
 * Java
    * Para criar e construir seu acordo de banco de dados do projeto. Através de pacotes como Model para modelar classes(entidades),
@@ -33,4 +34,11 @@ This is my project backend
 
 * PostgreSQL
   * para criação e manipulação dos dados assim como a conexão com aplicação.
+---
+* Service used(Serviços usados):
+* Git & Github
+  * Para versionamento de código e serviço em nuvem.
+
+* Postman
+  * Para requisições http através do endpoint com metodos: get,post,update,petch,delete. Com isso, obeter response que deve retornar um jeson.
 
