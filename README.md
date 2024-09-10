@@ -43,3 +43,9 @@ This is my project backend
   * Para requisições http através do endpoint com metodos: get,post,update,petch,delete. Com isso, obeter response que deve retornar um jeson.
 
 # Prints(Banco de Dados, Postman)
+
+https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/printBDaluno.png
+
+https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postNobd.png
+
+https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postStatus202.png
