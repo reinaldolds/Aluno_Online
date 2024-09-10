@@ -44,7 +44,9 @@ This is my project backend
 
 # Prints(Banco de Dados, Postman)
 
-https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/printBDaluno.png
+![Texto Alternativo](https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/printBDaluno.png
+)
+
 
 https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postNobd.png
 
