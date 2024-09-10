@@ -42,3 +42,4 @@ This is my project backend
 * Postman
   * Para requisições http através do endpoint com metodos: get,post,update,petch,delete. Com isso, obeter response que deve retornar um jeson.
 
+# Prints(Banco de Dados, Postman)
