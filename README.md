@@ -47,7 +47,8 @@ This is my project backend
 ![Texto Alternativo](https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/printBDaluno.png
 )
 
+![Texto Alternativo](https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postNobd.png
+)
 
-https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postNobd.png
-
-https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postStatus202.png
+![Texto Alternativo](https://github.com/reinaldolds/Aluno_Online/blob/main/api/src/main/resources/static/prints/postStatus202.png
+)
