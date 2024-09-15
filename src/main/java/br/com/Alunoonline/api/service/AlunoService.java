@@ -5,6 +5,8 @@ import br.com.Alunoonline.api.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AlunoService {
 
@@ -12,6 +14,11 @@ public class AlunoService {
     AlunoRepository alunoRepository;
 
     public void criarAluno(Aluno aluno){
+
         alunoRepository.save(aluno);
+    }
+
+    public List<Aluno> listarTodosAlunos(){
+        return alunoRepository.findAll();
     }
 }
