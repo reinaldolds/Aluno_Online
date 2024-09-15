@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/alunos")
@@ -29,4 +30,15 @@ public class AlunoController {
        return alunoService.listarTodosAlunos();
     }
 
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<Aluno> buscarAlunoPorId(@PathVariable Long id){
+        return alunoService.buscarAlunoPorId(id);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deletarAlunoPorId(@PathVariable Long id){
+        alunoService.deletarAlunoPorId(id);
+    }
 }
