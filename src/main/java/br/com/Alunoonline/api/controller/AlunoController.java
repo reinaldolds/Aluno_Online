@@ -41,4 +41,10 @@ public class AlunoController {
     public void deletarAlunoPorId(@PathVariable Long id){
         alunoService.deletarAlunoPorId(id);
     }
+
+    @PutMapping("/id")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void atualizarAlunoPorId(@PathVariable long id, @RequestBody Aluno aluno){
+        alunoService.atualizarAlunoPorId(id, aluno);
+    }
 }
