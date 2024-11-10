@@ -13,7 +13,7 @@ public class DisciplinaController {
 
     @Autowired
     DisciplinaService disciplinaService;
-jhgjhgjhg
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void criarDisciplina(@RequestBody Disciplina disciplina){
