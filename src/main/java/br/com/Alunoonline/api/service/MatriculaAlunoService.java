@@ -1,10 +1,7 @@
 package br.com.Alunoonline.api.service;
 
 
-<<<<<<< HEAD
-=======
 import br.com.Alunoonline.api.dtos.AtualizarNotasRequest;
->>>>>>> main_reinaldo
 import br.com.Alunoonline.api.enums.MatriculaStatusEnum;
 import br.com.Alunoonline.api.model.MatriculaAluno;
 import br.com.Alunoonline.api.repository.MatriculaAlunoRepository;
@@ -24,26 +21,6 @@ public class MatriculaAlunoService {
     public void criarMatriculaAluno(MatriculaAluno matriculaAluno){
 
         matriculaAluno.setStatus(MatriculaStatusEnum.MATRICULADO);
-<<<<<<< HEAD
-        matriculaAlunoRepository.save(matriculaAluno);
-    }
-
-    public void trancarMatricula(Long matriculaAlunoId){
-        MatriculaAluno matriculaAluno = matriculaAlunoRepository.findById(matriculaAlunoId)
-                .orElseThrow(() ->
-                        new ResponseStatusException(HttpStatus.NO_CONTENT,
-                                "Matricula Aluno não encontrado."));
-        if(!MatriculaStatusEnum.MATRICULADO.equals(matriculaAluno.getStatus())){
-
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                    "Só é possível trancar uma matricula com o status MATRICULADO");
-
-        }
-
-        matriculaAluno.setStatus(MatriculaStatusEnum.TRANCADO);
-
-=======
->>>>>>> main_reinaldo
         matriculaAlunoRepository.save(matriculaAluno);
     }
 
