@@ -2,6 +2,7 @@ package br.com.Alunoonline.api.service;
 
 
 import br.com.Alunoonline.api.dtos.AtualizarNotasRequest;
+import br.com.Alunoonline.api.dtos.HistoricoAlunoResponse;
 import br.com.Alunoonline.api.enums.MatriculaStatusEnum;
 import br.com.Alunoonline.api.model.MatriculaAluno;
 import br.com.Alunoonline.api.repository.MatriculaAlunoRepository;
@@ -9,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 
 @Service
 public class MatriculaAlunoService {
@@ -71,5 +74,15 @@ public class MatriculaAlunoService {
             Double media = (nota1+nota2)/2;
             matriculaAluno.setStatus(media >= MEDIA_PARA_APROVACAO ? MatriculaStatusEnum.APROVADO : MatriculaStatusEnum.REPROVADO);
         }
+    }
+
+    public HistoricoAlunoResponse emitirHistorico(Long alunoId){
+        List<MatriculaAluno> matriculaAluno = matriculaAlunoRepository.findByAlunoId(alunoId);
+
+        if (matriculaAluno.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "Esse aluno não possui matricula");
+        }
+        return null;
     }
 }
