@@ -2,6 +2,7 @@ package br.com.Alunoonline.api.service;
 
 
 import br.com.Alunoonline.api.dtos.AtualizarNotasRequest;
+import br.com.Alunoonline.api.dtos.DisciplinaAlunoResponse;
 import br.com.Alunoonline.api.dtos.HistoricoAlunoResponse;
 import br.com.Alunoonline.api.enums.MatriculaStatusEnum;
 import br.com.Alunoonline.api.model.MatriculaAluno;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -76,13 +78,45 @@ public class MatriculaAlunoService {
         }
     }
 
-    public HistoricoAlunoResponse emitirHistorico(Long alunoId){
-        List<MatriculaAluno> matriculaAluno = matriculaAlunoRepository.findByAlunoId(alunoId);
+    public Double cal_Media(double x, double y){
+      double total = (x+y)/2;
+      return total;
+    };
 
-        if (matriculaAluno.isEmpty()){
+    public HistoricoAlunoResponse emitirHistorico(Long alunoId){
+        List<MatriculaAluno> matriculasDoAluno = matriculaAlunoRepository.findByAlunoId(alunoId);
+
+        if (matriculasDoAluno.isEmpty()){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "Esse aluno não possui matricula");
         }
-        return null;
+
+        HistoricoAlunoResponse historicoAluno = new HistoricoAlunoResponse();
+        historicoAluno.setNomeAluno(matriculasDoAluno.get(0).getAluno().getNome());
+        historicoAluno.setCpfAluno(matriculasDoAluno.get(0).getAluno().getCpf());
+        historicoAluno.setEmailAluno(matriculasDoAluno.get(0).getAluno().getEmail());
+
+        List<DisciplinaAlunoResponse> disciplinasList = new ArrayList<>();
+        for (MatriculaAluno matriculaAluno: matriculasDoAluno){
+            DisciplinaAlunoResponse disciplinaAlunoResponse = new DisciplinaAlunoResponse();
+            disciplinaAlunoResponse.setNomeDisciplina(matriculaAluno.getDisciplina().getNome());
+            disciplinaAlunoResponse.setNomeProfessor(matriculaAluno.getDisciplina().getProfessor().getNome());
+            disciplinaAlunoResponse.setNota1(matriculaAluno.getNota1());
+            disciplinaAlunoResponse.setNota2(matriculaAluno.getNota2());
+
+            if (matriculaAluno.getNota1() != null && matriculaAluno.getNota2() != null){
+                disciplinaAlunoResponse.setMedia(cal_Media(matriculaAluno.getNota1(), matriculaAluno.getNota2()));
+
+            }else {
+                disciplinaAlunoResponse.setMedia(null);
+            }
+            disciplinaAlunoResponse.setStatus(matriculaAluno.getStatus());
+
+            disciplinasList.add(disciplinaAlunoResponse);
+        }
+        historicoAluno.setDisciplinaAlunoResponses(disciplinasList);
+
+
+        return historicoAluno;
     }
 }

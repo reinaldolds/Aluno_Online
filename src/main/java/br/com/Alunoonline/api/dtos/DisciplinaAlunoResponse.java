@@ -11,5 +11,6 @@ public class DisciplinaAlunoResponse {
     private String nomeProfessor;
     private Double nota1;
     private Double nota2;
+    private Double media;
     private MatriculaStatusEnum status;
 }

@@ -29,8 +29,8 @@ public class MatriculaAluno implements Serializable {
     @JoinColumn(name = "disciplina_id")
     private Disciplina disciplina;
 
-    private double nota1;
-    private double nota2;
+    private Double nota1;
+    private Double nota2;
     @Enumerated(EnumType.STRING)
     private MatriculaStatusEnum status;
 }
