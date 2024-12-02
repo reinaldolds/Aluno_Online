@@ -22,7 +22,7 @@ This is my project backend
    * Para construir aplicação backend com estrutura REST tendo comunicação com banco de dados do projeto.
 * Padrão do Projeto
    * Através de pacotes como `Model` para modelar classes(entidades) que serão geradas como tabelas no banco
-     de dados, ´Services´ para criar regras de negócios, `Repository` para gerenciar a ponte de conexão com
+     de dados, `Services` para criar regras de negócios, `Repository` para gerenciar a ponte de conexão com
      banco através do JPA, `Controller` mais voltado para front do projeto com ciração e mapeamento dos
      endpoints de conexão HTTP, fazendo injeção de dependências das classes necessárias para o processo da
      aplicação, `Config` usado para criar classe que conecta com swagger que é utilizado para testes e de
