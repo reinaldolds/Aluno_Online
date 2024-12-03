@@ -1,5 +1,11 @@
-# Exercício 1: Aluno_Online
+# Aluno_Online
 Aluno: Reinaldo Lira de Sousa
+
+disciplina: BackEnd 
+
+Faculdade: UNIESP   P3
+
+Tipo de projeto: Acadêmico
 
 This is my project backend
 
@@ -16,21 +22,28 @@ This is my project backend
    * Postman
 
 * Java
-   * Para criar e construir seu acordo de banco de dados do projeto. Através de pacotes como Model para modelar classes(entidades),
-      Services para criar regras de negócios, Repository para conexão com banco, Controller mais voltado para front do projeto, fazendo
-      injeção de dependências das classes necessárias para o processo da aplicação.
+   * Para construir aplicação backend com estrutura REST tendo comunicação com banco de dados do projeto.
+* Padrão do Projeto
+   * Através de pacotes como `Model` para modelar classes(entidades) que serão geradas como tabelas no banco
+     de dados, `Services` para criar regras de negócios, `Repository` para gerenciar a ponte de conexão com
+     banco através do JPA, `Controller` mais voltado para front do projeto com ciração e mapeamento dos
+     endpoints de conexão HTTP, fazendo injeção de dependências das classes necessárias para o processo da
+     aplicação, `Config` usado para criar classe que conecta com swagger que é utilizado para testes e de
+     criação da documentação, `DTO` usada para criar classe que extrai apenas partes necessarias de outra
+     classe, `enums` usada para realizar enumerações no projeto, neste é usada para parte de situação do
+     status.
 
 * Spring Boot
-   * Para crair projeto com nome, dominio e dependências. 
+   * Framework usada para crair projeto e dominio e dependências. 
 
-* Dependency
-   * As dependências utilizadas no projeto: "Spring web" para visualização do projeto, "Spring data" para integração e simplificar acesso ao
-   banco de dados, "PostgresSQL" para permitir acesso do spring boot com o banco de dados PostgreSQL, "Lombok" para ajudar na parte de criação
-   dos códigos como os gets,sets, e acelerar na produçao.
-
+* As dependências utilizadas no projeto:
+  * Spring web - para visualização do projeto
+  * Spring data - para integração e simplificar acesso ao banco de dados
+  * PostgresSQL - para permitir acesso do spring boot com o banco de dados PostgreSQL
+  * Lombok - para ajudar na parte de implementação dos gets,sets, toString e acelerar na produçao.
 
 * Dbeaver
-   * Para gerenciamento do banco de dados.
+  * Para gerenciamento do banco de dados.
 
 * PostgreSQL
   * para criação e manipulação dos dados assim como a conexão com aplicação.
