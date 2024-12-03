@@ -27,7 +27,7 @@ public class ProfessorService {
        return professorRepository.findById(id);
     }
 
-    public void deletarPorId(Long id){
+    public void deletarProfessorPorId(Long id){
         professorRepository.deleteById(id);
     }
 

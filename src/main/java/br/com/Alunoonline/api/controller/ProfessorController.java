@@ -35,8 +35,8 @@ public class ProfessorController {
 
     @DeleteMapping("/id")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deletarPorId(@PathVariable Long id){
-        professorService.deletarPorId(id);
+    public void deletarProfessorPorId(@PathVariable Long id){
+        professorService.deletarProfessorPorId(id);
     }
 
     @PutMapping
